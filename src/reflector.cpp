@@ -12,3 +12,7 @@ std::vector<int> Reflector::decode_wiring(const std::string& encoding) {
 
     return wiring;
 }
+
+Reflector Reflector::create(const std::string& name) {
+    return Reflector("ABC");
+}

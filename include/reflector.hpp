@@ -2,14 +2,14 @@
 #define REFLECTOR_H
 
 #include <string> 
-
+#include <vector>
 
 class Reflector {
     public:
         Reflector( void ) {}
         virtual ~Reflector( void ) {}
     
-        // constructor with user defined encoding
+        // constructor with user defined encoding - 26 letter string
         Reflector(const std::string& encoding);
 
         // Some predefined reflectors
@@ -18,11 +18,10 @@ class Reflector {
         // forward path through reflector
         int forward(const int& c);
 
-    private:
-        static void decode_wiring(const std::string& encoding);
+        static std::vector<int> decode_wiring(const std::string& encoding);
 
         // wiring array
-        int forward_wiring [26];
+        std::vector<int> forward_wiring;
 };
 
 #endif

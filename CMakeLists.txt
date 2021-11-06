@@ -38,7 +38,9 @@ include_directories(${PROJECT_SOURCE_DIR}/extern/eigen)
 # BUILD TARGETS
 ################################################################################
 include_directories(${PROJECT_SOURCE_DIR}/include)
-add_executable(main src/main.cpp )
+add_executable(main 
+    src/main.cpp
+    src/reflector.cpp)
 
 ################################################################################
 # Testing example

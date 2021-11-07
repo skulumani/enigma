@@ -1,5 +1,9 @@
 #include "reflector.hpp"
 
+#include <iostream>
+#include <string>
+#include <vector>
+
 Reflector::Reflector(const std::string& encoding) {
     this->forward_wiring = Reflector::decode_wiring(encoding);
 }
@@ -14,5 +18,14 @@ std::vector<int> Reflector::decode_wiring(const std::string& encoding) {
 }
 
 Reflector Reflector::create(const std::string& name) {
-    return Reflector("ABC");
+    switch (name) {
+    
+        case "B" :
+            std::cout << "Reflector B" << std::endl;
+            break;
+        default :
+            std::cout << "Default reflector" << std::endl;
+            break;
+    }
+
 }

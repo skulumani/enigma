@@ -11,8 +11,9 @@ int main() {
 
     std::cout << test << " : " << test_int << std::endl;
     
-    Reflector reflector("ABC");
-
+    ReflectorType type(Default);
+    Reflector reflector("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    
     for (int i: reflector.forward_wiring) {
         std::cout << i << " ";
     }

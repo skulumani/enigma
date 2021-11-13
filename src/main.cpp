@@ -11,8 +11,8 @@ int main() {
 
     std::cout << test << " : " << test_int << std::endl;
     
-    ReflectorType type(Default);
-    Reflector reflector("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    ReflectorType type(ThinC);
+    Reflector reflector = Reflector::create(type);
     
     for (int i: reflector.forward_wiring) {
         std::cout << i << " ";

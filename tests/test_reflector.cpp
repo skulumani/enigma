@@ -47,3 +47,12 @@ TEST(TestReflector, Create_ThinC) {
         ASSERT_EQ(reflector.forward_wiring[ii], exp_wiring[ii]);
     }
 }
+
+TEST(TestReflector, ForwardPath) {
+    ReflectorType type(ThinC); 
+    Reflector reflector = Reflector::create(type);
+    std::vector<int> exp_wiring = {17, 3, 14, 1, 9, 13, 19, 10, 21, 4, 7, 12, 11, 5, 2, 22, 25, 0, 23, 6, 24, 8, 15, 18, 20, 16};
+    for (int ii = 0; ii < 26; ii++) {
+        ASSERT_EQ(reflector.forward(ii), exp_wiring[ii]);
+    }
+}

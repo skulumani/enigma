@@ -48,3 +48,7 @@ Reflector Reflector::create(const ReflectorType& type) {
     return Reflector(encoding);
 
 }
+
+int Reflector::forward(const int& c) {
+    return forward_wiring[c];
+}

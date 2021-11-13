@@ -19,5 +19,7 @@ int main() {
     }
     std::cout << std::endl;
 
+    std::cout << "Forward path: " << reflector.forward(0) << std::endl;
+
     return 0;
 }
